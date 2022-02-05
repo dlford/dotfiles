@@ -239,6 +239,11 @@ nnoremap fi :set fdm=indent<CR>
 " fo: Set fold mode to off (expr)
 nnoremap fo :set fdm=expr<CR>
 
+" ctrl+c: Calculate (run calculations on current line)
+" e.g. type (5*5)/2 on a line and press ctrl+c
+" would change the line to `(5*5)/2 = 12.50`
+nnoremap <C-c> yypkA =<Esc>jOscale=2<Esc>:.,+1!bc<CR>kJ
+
 " Editor Config
 " -------------
 
