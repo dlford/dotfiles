@@ -1,0 +1,42 @@
+env:
+  TERM: xterm-256color
+window:
+  decorations: none
+  dynamic_title: false
+  gtk_theme_variatn: dark
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach -t main || tmux new -s main"
+cursor:
+  unfocused_hollow: true
+font:
+  size: 8.0
+  normal:
+    family: "MesloLGSDZ Nerd Font Mono"
+    style: Regular
+colors:
+  primary:
+    background: '#282c34'
+    foreground: '#abb2bf'
+  normal:
+    black: '#282c34'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#abb2bf'
+  bright:
+    black: '#5c6370'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#ffffff'
+theme: One-Dark

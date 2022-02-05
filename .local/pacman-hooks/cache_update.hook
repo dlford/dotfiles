@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Clearing cache...
+When = PostTransaction
+Exec = /home/dan/.local/bin/yay_upgrade_script
