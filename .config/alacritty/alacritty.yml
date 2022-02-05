@@ -1,22 +1,16 @@
-env:
-  TERM: xterm-256color
 window:
-  decorations: none
   dynamic_title: false
-  gtk_theme_variatn: dark
+working_directory: c:/cms30/nodeServer/clients
 shell:
-  program: /bin/zsh
+  program: wsl
   args:
-    - -l
-    - -c
-    - "tmux attach -t main || tmux new -s main"
+    - "tmux"
 cursor:
   unfocused_hollow: true
 font:
-  size: 8.0
+  size: 11
   normal:
-    family: "MesloLGSDZ Nerd Font Mono"
-    style: Regular
+    family: "CaskaydiaCove Nerd Font Mono"
 colors:
   primary:
     background: '#282c34'
