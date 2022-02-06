@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Joplin
+GenericName=Notes
+Comment=Note taking
+Type=Application
+Exec=/home/dan/.local/bin/joplin-current
+Icon=/home/dan/.local/share/pixmaps/Joplin.png
+Terminal=false
