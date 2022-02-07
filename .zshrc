@@ -105,12 +105,25 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias weather="curl wttr.in"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias tmux="tmux -u2"
+alias cdclients="cd /mnt/c/cms30/nodeServer/clients"
+alias cdhome="cd /mnt/c/Users/dan.ford"
+alias cdgit="cd /mnt/c/Users/dan.ford/git"
+alias gs="git status"
+alias gsa="git stash push"
+alias gsp="git stash pop"
+alias ga="git add -A"
+alias grc="git rebase --continue"
+alias grs="git rebase --skip"
+alias gmc="git merge --continue"
+export LC_ALL=C
+export EDITOR=vim
 
 # If vte.sh is not found:
 #   ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-  source /etc/profile.d/vte.sh
-fi
+# if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+#   source /etc/profile.d/vte.sh
+# fi
 
 # This loads nvm
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
