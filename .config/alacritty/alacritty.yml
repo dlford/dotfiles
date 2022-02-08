@@ -4,7 +4,7 @@ working_directory: c:/cms30/nodeServer/clients
 shell:
   program: wsl
   args:
-    - "tmux"
+    - "tmux attach -t main || tmux new -s main"
 cursor:
   unfocused_hollow: true
 font:
