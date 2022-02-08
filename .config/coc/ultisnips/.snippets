@@ -24,4 +24,53 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
+snippet sync "Sync Notes" b
+# Sync `date +%Y-%m-%d`
+	source: $1 
+	source_cluster: $2
+	destination: ${3:$1-redesign}
+	destination_cluster: ${4:staging_cluster1}
 
+	# Add DNS entries
+		https://github.com/simpleviewinc/cms-admin
+
+	# Backup from live:
+		sudo sv backupDb $2 client_$1 excludeCollections=plugins_core_cache,plugins_events_events,plugins_events_events_by_date,plugins_listings_listings,plugins_offers_offers verbose=true
+			file:
+		sudo sv backupDb $4 client_$3 excludeCollections=plugins_core_cache,plugins_events_events,plugins_events_events_by_date,plugins_listings_listings,plugins_offers_offers verbose=true
+			file: 
+
+	# Restore
+		Source: sudo sv restoreDb local_cluster1 client_$1 
+		Destination: sudo sv restoreDb local_cluster1 client_$3 
+
+	# Run sync scripts
+
+	# Backup local
+		sudo sv backupDb local_cluster1 client_$3
+			File: 
+
+	# Run collection mapping
+		Backup File: 
+
+	# Run panel mapping
+		Backup File: 
+
+	# Run widget mapping
+		Backup File: 
+
+	# Run deletes
+		Backup File: 
+
+	# Run field migrations
+		Backup File: 
+
+	# Make sure it all works
+		Backup File: 
+
+	# Upload to staging/live"
+
+	# Undeploy staging (if deploying to live)
+
+	# Update whiteboard
+endsnippet
