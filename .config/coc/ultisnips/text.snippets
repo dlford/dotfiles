@@ -1,0 +1,76 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet sync "Sync Notes" b
+# Sync `date +%Y-%m-%d`
+	source: $1 
+	source_cluster: $2
+	destination: ${3:$1-redesign}
+	destination_cluster: ${4:staging_cluster1}
+
+	# Add DNS entries
+		https://github.com/simpleviewinc/cms-admin
+
+	# Backup from live:
+		sudo sv backupDb $2 client_$1 excludeCollections=plugins_core_cache,plugins_events_events,plugins_events_events_by_date,plugins_listings_listings,plugins_offers_offers verbose=true
+			file:
+		sudo sv backupDb $4 client_$3 excludeCollections=plugins_core_cache,plugins_events_events,plugins_events_events_by_date,plugins_listings_listings,plugins_offers_offers verbose=true
+			file: 
+
+	# Restore
+		Source: sudo sv restoreDb local_cluster1 client_$1 
+		Destination: sudo sv restoreDb local_cluster1 client_$3 
+
+	# Run sync scripts
+
+	# Backup local
+		sudo sv backupDb local_cluster1 client_$3
+			File: 
+
+	# Run collection mapping
+		Backup File: 
+
+	# Run panel mapping
+		Backup File: 
+
+	# Run widget mapping
+		Backup File: 
+
+	# Run deletes
+		Backup File: 
+
+	# Run field migrations
+		Backup File: 
+
+	# Make sure it all works
+		Backup File: 
+
+	# Upload to staging/live"
+
+	# Undeploy staging (if deploying to live)
+
+	# Update whiteboard
+endsnippet
