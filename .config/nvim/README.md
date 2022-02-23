@@ -17,8 +17,9 @@
 - OS clipboard functions require handler (e.g. xclip on linux, or win32yank on Windows)
   - download win32yank (https://github.com/equalsraf/win32yank) and put the exe in WSL at `/usr/local/bin` (and `chmod +x` it)
 - rnvimr file manager requires Ranger, pynvim, python3.6, and optionally ueberzug
-- yay -S ranger python-pynvim ueberzug OR pip3 install ranger-fm pynvim ueberzug
-- run `nvim +'chekhealth rnvimr'` from command line to validate
+  - yay -S ranger python-pynvim ueberzug OR pip3 install ranger-fm pynvim ueberzug
+  - run `nvim +'chekhealth rnvimr'` from command line to validate
+- coc-volar (Vue) optionally requires watchman for a better experience
 - Neovide GUI (Optional)
   - Check the font setting in `init.vim`, use a nerd font installed on your system
   - For Neovide on Windows, download the Windows exe and create a shortcut with the argument `--wsl`
@@ -28,7 +29,7 @@
 
 ```txt
 :CocInstall coc-tsserver coc-eslint coc-html coc-css coc-prettier coc-json coc-markdownlint coc-highlight coc-jest coc-marketplace
-:CocInstall coc-yaml coc-toml coc-xml coc-tailwindcss coc-svg coc-styled-components coc-docker coc-snippets coc-git
+:CocInstall coc-yaml coc-toml coc-xml coc-tailwindcss coc-svg coc-styled-components coc-docker coc-snippets coc-git @yaegassy/coc-volar
 ```
 
 ## TMUX
