@@ -81,7 +81,7 @@ let g:rnvimr_enable_bw = 1
 let g:NERDTreeHighlightCursorline = 1
 
 " Auto close tag filetypes
-let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx,javascript,*.ts,*.tsx,typescript'
+let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx,javascript,*.ts,*.tsx,typescript,vue,*.vue'
 
 " Lualine
 lua << EOF
