@@ -29,6 +29,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
   Plug 'folke/todo-comments.nvim'
   Plug 'TimUntersberger/neogit'
   Plug 'wellle/context.vim'
@@ -82,6 +83,21 @@ let g:NERDTreeHighlightCursorline = 1
 
 " Auto close tag filetypes
 let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx,javascript,*.ts,*.tsx,typescript,vue,*.vue'
+
+" Telescope FZF Sorter
+lua << EOF
+  require('telescope').setup {
+    extensions = {
+      fzf = {
+        fuzzy = true,
+        override_generic_sorter = true,
+        override_file_sorter = true,
+        case_mode = "smart_case",
+      }
+    }
+  }
+  require('telescope').load_extension('fzf')
+EOF
 
 " Lualine
 lua << EOF
