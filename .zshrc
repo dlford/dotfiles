@@ -104,7 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias weather="curl wttr.in"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias playbook="ansible-playbook --vault-password-file ~/.ansible_vault"
 
 # If vte.sh is not found:
 #   ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
