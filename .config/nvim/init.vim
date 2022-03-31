@@ -35,6 +35,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Darazaki/indent-o-matic'
   Plug 'stephpy/vim-yaml' "Slimmed down YAML syntax for better performance
   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } "Read More - https://github.com/glacambre/firenvim
+  Plug 'tpope/vim-commentary' "Comment code blocks
 call plug#end()
 
 " Neovide GUI config
@@ -243,6 +244,9 @@ nnoremap fo :set fdm=expr<CR>
 " e.g. type (5*5)/2 on a line and press ctrl+c
 " would change the line to `(5*5)/2 = 12.50`
 nnoremap <C-c> yypkA =<Esc>jOscale=2<Esc>:.,+1!bc<CR>kJ
+
+" alt+/: Comment/Uncomment lines in visual mode
+map <M-/> <Plug>Commentary
 
 " Editor Config
 " -------------
