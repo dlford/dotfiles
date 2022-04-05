@@ -13,7 +13,7 @@ shell:
 cursor:
   unfocused_hollow: true
 font:
-  size: 8.0
+  size: 10.0
   normal:
     family: "MesloLGSDZ Nerd Font Mono"
     style: Regular
