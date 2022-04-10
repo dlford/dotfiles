@@ -3,7 +3,7 @@ env:
 window:
   decorations: none
   dynamic_title: false
-  gtk_theme_variatn: dark
+  gtk_theme_variant: dark
 shell:
   program: /bin/zsh
   args:
@@ -13,7 +13,7 @@ shell:
 cursor:
   unfocused_hollow: true
 font:
-  size: 8.0
+  size: 10.5
   normal:
     family: "MesloLGSDZ Nerd Font Mono"
     style: Regular
