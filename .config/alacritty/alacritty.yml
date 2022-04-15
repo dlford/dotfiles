@@ -1,7 +1,6 @@
 env:
   TERM: xterm-256color
 window:
-  decorations: none
   dynamic_title: false
   gtk_theme_variant: dark
 shell:
