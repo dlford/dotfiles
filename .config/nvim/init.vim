@@ -121,6 +121,12 @@ colorscheme one
 set background=dark
 highlight ScrollView ctermbg=159 guibg=LightCyan " Scrollbar color
 
+" highlight yank
+augroup highlight_yank
+  autocmd!
+  au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=3000}
+augroup END
+
 " Hotkeys
 " -------
 
