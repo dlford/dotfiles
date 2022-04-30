@@ -36,6 +36,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Darazaki/indent-o-matic'
   Plug 'stephpy/vim-yaml' "Slimmed down YAML syntax for better performance
   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } "Read More - https://github.com/glacambre/firenvim
+  Plug 'ap/vim-css-color'
 call plug#end()
 
 " Neovide GUI config
