@@ -87,6 +87,10 @@ let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx,javascript,*.ts,*.tsx,type
 " Telescope FZF Sorter
 lua << EOF
   require('telescope').setup {
+    file_ignore_patterns = {
+      "node%_modules/.*",
+      "generated/.*",
+    },
     extensions = {
       fzf = {
         fuzzy = true,
