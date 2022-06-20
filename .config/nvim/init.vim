@@ -34,7 +34,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'wellle/context.vim'
   Plug 'Darazaki/indent-o-matic'
   Plug 'stephpy/vim-yaml' "Slimmed down YAML syntax for better performance
-  Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } "Read More - https://github.com/glacambre/firenvim
+  "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } "Read More - https://github.com/glacambre/firenvim
   Plug 'tpope/vim-commentary' "Comment code blocks
   Plug 'ap/vim-css-color'
 call plug#end()
@@ -44,7 +44,7 @@ call plug#end()
 
 " Path to Ranger (not usually needed, but WSL doesn't resolve PATH correctly)
 " TODO: Check Me
-let g:rnvimr_ranger_cmd = '~/.local/bin/ranger'
+let g:rnvimr_ranger_cmd = ['/home/dan/.local/bin/ranger']
 
 " Font
 " TODO: Check Me
