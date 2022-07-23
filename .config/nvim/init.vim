@@ -35,7 +35,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'wellle/context.vim'
   Plug 'Darazaki/indent-o-matic'
   Plug 'stephpy/vim-yaml' "Slimmed down YAML syntax for better performance
-  Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } "Read More - https://github.com/glacambre/firenvim
+  " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } "Read More - https://github.com/glacambre/firenvim
   Plug 'ap/vim-css-color'
 call plug#end()
 
@@ -44,7 +44,7 @@ call plug#end()
 
 " Path to Ranger (not usually needed, but WSL doesn't resolve PATH correctly)
 " TODO: Check Me
-"let g:rnvimr_ranger_cmd = '~/.local/bin/ranger'
+"let g:rnvimr_ranger_cmd = ['~/.local/bin/ranger']
 
 " Font
 " TODO: Check Me
@@ -136,6 +136,12 @@ syntax on
 colorscheme one
 set background=dark
 highlight ScrollView ctermbg=159 guibg=LightCyan " Scrollbar color
+
+" highlight yank
+augroup highlight_yank
+  autocmd!
+  au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=3000}
+augroup END
 
 " Hotkeys
 " -------
