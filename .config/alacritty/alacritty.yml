@@ -3,6 +3,9 @@ env:
 window:
   dynamic_title: false
   gtk_theme_variant: dark
+  dimensions:
+    columns: 133
+    lines: 40
 shell:
   program: /bin/zsh
   args:
