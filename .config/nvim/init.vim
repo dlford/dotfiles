@@ -37,6 +37,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'stephpy/vim-yaml' "Slimmed down YAML syntax for better performance
   " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } "Read More - https://github.com/glacambre/firenvim
   Plug 'ap/vim-css-color'
+  Plug 'github/copilot.vim'
 call plug#end()
 
 " Neovide GUI config
