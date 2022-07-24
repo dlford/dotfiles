@@ -3,6 +3,8 @@ env:
 window:
   dynamic_title: false
   gtk_theme_variant: dark
+  decorations: None
+  startup_mode: Maximized
   dimensions:
     columns: 133
     lines: 40
