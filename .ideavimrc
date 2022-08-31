@@ -1,0 +1,99 @@
+set ignorecase
+set smartcase
+set showmatch
+set incsearch
+set hlsearch
+set commentary
+set surround
+set NERDTree
+set relativenumber
+set scrolloff=3 " lines above/below cursor when scrolling
+
+" WHITESPACE (default)
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set noexpandtab
+
+" Runner
+nnoremap ,r :action ChooseRunConfiguration<cr>
+
+" Copy to system clipboard as well
+set clipboard+=unnamed
+
+" Use Idea to join lines smartly
+set ideajoin
+
+" Multiple cursors support
+set multiple-cursors
+
+let mapleader = ","
+
+" Create new vertical splits on right and horizontals on below
+set splitright
+set splitbelow
+
+" Use Q for formatting the current paragraph (or visual selection)
+vmap Q gq
+nmap Q gqap
+
+" key bindings for quickly moving between windows
+nmap <A-h> <c-w>h
+nmap <A-l> <c-w>l
+nmap <A-k> <c-w>k
+nmap <A-j> <c-w>j
+
+" Full screen window
+nmap <C-S-t> :action HideAllWindows<cr>
+
+" NERDTree
+map <C-o> :NERDTree<cr>
+
+" Buffers
+nmap <C-b> :action RecentFiles<cr>
+
+" Find filename
+nmap <C-p> :action GotoFile<cr>
+
+" Find in files
+nmap <C-f> :action FindInPath<cr>
+
+" Next error
+nmap <C-e> :action GotoNextError<cr>
+
+" Previous error
+nmap <C-S-e> :action GotoPreviousError<cr>
+
+" Open action menu
+nmap <C-S-p> :action GotoAction<cr>
+
+" Terminal
+nmap <C-t> :action ActivateTerminalToolWindow<cr>
+
+" Git
+nmap <C-g> :action Git.Menu<cr>
+nnoremap ,gu :action Vcs.RollbackChangedLines<cr>
+nnoremap ,gh :action Vcs.ShowHistoryForBlock<cr>
+nnoremap ,gl :action Vcs.Show.Log<cr>
+
+" Tab navigation
+nnoremap th :action PreviousTab<cr>
+nnoremap tl :action NextTab<cr>
+nmap td :action CloseContent<cr>
+nmap tD :action ReopenClosedTab<cr>
+nmap to :action CloseAllEditorsButActive<cr>
+
+" Moving lines
+nmap [e :action MoveLineUp<cr>
+nmap ]e :action MoveLineDown<cr>
+
+" Moving statements
+nmap [s :action MoveStatementUp<cr>
+nmap ]s :action MoveStatementDown<cr>
+
+" Task Switcher
+nnoremap <BS> :action Switcher<cr>
+
+" Increase or decrease font size
+nnoremap <C-=> :action EditorIncreaseFontSize<cr>
+nnoremap <C--> :action EditorDecreaseFontSize<cr>
