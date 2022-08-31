@@ -1,12 +1,22 @@
 set ignorecase
 set smartcase
+set showmatch
 set incsearch
+set hlsearch
+set commentary
+set surround
+set NERDTree
+set relativenumber
 set scrolloff=3 " lines above/below cursor when scrolling
 
-" Emulated Plugins
-set surround
-" set easymotion
-set NERDTree
+" WHITESPACE (default)
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set noexpandtab
+
+" Runner
+nnoremap ,r :action ChooseRunConfiguration<cr>
 
 " Copy to system clipboard as well
 set clipboard+=unnamed
@@ -32,10 +42,6 @@ nmap <A-h> <c-w>h
 nmap <A-l> <c-w>l
 nmap <A-k> <c-w>k
 nmap <A-j> <c-w>j
-
-" Closing tabs
-nmap td :action CloseContent<cr>
-nmap tD :action ReopenClosedTab<cr>
 
 " Full screen window
 nmap <C-S-t> :action HideAllWindows<cr>
@@ -66,10 +72,16 @@ nmap <C-t> :action ActivateTerminalToolWindow<cr>
 
 " Git
 nmap <C-g> :action Git.Menu<cr>
+nnoremap ,gu :action Vcs.RollbackChangedLines<cr>
+nnoremap ,gh :action Vcs.ShowHistoryForBlock<cr>
+nnoremap ,gl :action Vcs.Show.Log<cr>
 
 " Tab navigation
-nnoremap tl :action PreviousTab<cr>
-nnoremap th :action NextTab<cr>
+nnoremap th :action PreviousTab<cr>
+nnoremap tl :action NextTab<cr>
+nmap td :action CloseContent<cr>
+nmap tD :action ReopenClosedTab<cr>
+nmap to :action CloseAllEditorsButActive<cr>
 
 " Moving lines
 nmap [e :action MoveLineUp<cr>
