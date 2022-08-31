@@ -6,7 +6,7 @@ set hlsearch
 set commentary
 set surround
 set NERDTree
-set relativenumber
+" set relativenumber
 set scrolloff=3 " lines above/below cursor when scrolling
 
 let mapleader = ","
@@ -15,7 +15,7 @@ let mapleader = ","
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set noexpandtaj
+set noexpandtab
 
 " config
 nnoremap \e :e ~/.ideavimrc<CR>
