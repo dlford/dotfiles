@@ -82,7 +82,6 @@ let g:rnvimr_enable_bw = 1
 
 " Highlight open file in file tree
 let g:NERDTreeHighlightCursorline = 1
-
 " Auto close tag filetypes
 let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx,javascript,*.ts,*.tsx,typescript,vue,*.vue'
 
@@ -107,6 +106,14 @@ lua << EOF
     options = { theme = 'onedark' }
   })
 EOF
+
+" FIX:
+" TODO:
+" HACK:
+" WARN:
+" PERF:
+" NOTE:
+
 
 " Comment tags
 lua << EOF

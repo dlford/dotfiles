@@ -5,9 +5,9 @@ set incsearch
 set hlsearch
 set commentary
 set surround
-set NERDTree
 " set relativenumber
 set scrolloff=3 " lines above/below cursor when scrolling
+set NERDTree
 
 let mapleader = ","
 
