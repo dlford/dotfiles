@@ -9,11 +9,20 @@ set NERDTree
 set relativenumber
 set scrolloff=3 " lines above/below cursor when scrolling
 
+let mapleader = ","
+
 " WHITESPACE (default)
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set noexpandtab
+set noexpandtaj
+
+" config
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+" Zen mode
+nnoremap <c-z> :action ToggleZenMode<CR>
 
 " Runner
 nnoremap ,r :action ChooseRunConfiguration<cr>
@@ -26,8 +35,6 @@ set ideajoin
 
 " Multiple cursors support
 set multiple-cursors
-
-let mapleader = ","
 
 " Create new vertical splits on right and horizontals on below
 set splitright
@@ -43,8 +50,8 @@ nmap <A-l> <c-w>l
 nmap <A-k> <c-w>k
 nmap <A-j> <c-w>j
 
-" Full screen window
-nmap <C-S-t> :action HideAllWindows<cr>
+" Hide side bars
+nmap <C-x> :action HideAllWindows<cr>
 
 " NERDTree
 map <C-o> :NERDTree<cr>
