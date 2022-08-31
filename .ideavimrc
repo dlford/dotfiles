@@ -22,7 +22,13 @@ nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
 " Zen mode
-nnoremap <c-z> :action ToggleZenMode<CR>
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+
+" Zen mode fullscreen
+nnoremap <c-s-z> :action ToggleZenMode<CR>
+
+" Presentation Mode
+nnoremap <c-s-a-z> :action TogglePresentationMode<CR>
 
 " Runner
 nnoremap ,r :action ChooseRunConfiguration<cr>
