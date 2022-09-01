@@ -39,6 +39,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ap/vim-css-color'
   Plug 'github/copilot.vim'
   Plug 'easymotion/vim-easymotion'
+  Plug 'mattn/emmet-vim'
 call plug#end()
 
 " Neovide GUI config
