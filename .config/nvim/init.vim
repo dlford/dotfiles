@@ -38,6 +38,7 @@ call plug#begin('~/.vim/plugged')
   " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } "Read More - https://github.com/glacambre/firenvim
   Plug 'ap/vim-css-color'
   Plug 'github/copilot.vim'
+  Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " Neovide GUI config
@@ -150,6 +151,11 @@ augroup END
 
 " Hotkeys
 " -------
+
+" Multiple cursors
+
+" Easymotion
+map f <Plug>(easymotion-s)
 
 " Shift+Alt+b: Show/Hide context (breadcrumbs)
 map <S-A-b> :ContextActivate<CR>:ContextUpdate<CR>:ContextToggle<CR>
