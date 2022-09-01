@@ -1,3 +1,5 @@
+let mapleader = ","
+
 set ignorecase
 set smartcase
 set showmatch
@@ -5,11 +7,14 @@ set incsearch
 set hlsearch
 set commentary
 set surround
+set multicursor
 " set relativenumber
 set scrolloff=3 " lines above/below cursor when scrolling
 set NERDTree
 
-let mapleader = ","
+Plug 'easymotion/vim-easymotion'
+set easymotion
+map f <Plug>(easymotion-s)
 
 " WHITESPACE (default)
 set tabstop=2
