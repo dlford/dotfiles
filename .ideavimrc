@@ -1,3 +1,5 @@
+let mapleader = ","
+
 set ignorecase
 set smartcase
 set showmatch
@@ -5,11 +7,14 @@ set incsearch
 set hlsearch
 set commentary
 set surround
-set NERDTree
+set multicursor
 " set relativenumber
 set scrolloff=3 " lines above/below cursor when scrolling
+set NERDTree
 
-let mapleader = ","
+Plug 'easymotion/vim-easymotion'
+set easymotion
+map f <Plug>(easymotion-s)
 
 " WHITESPACE (default)
 set tabstop=2
@@ -22,7 +27,13 @@ nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
 " Zen mode
-nnoremap <c-z> :action ToggleZenMode<CR>
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+
+" Zen mode fullscreen
+nnoremap <c-s-z> :action ToggleZenMode<CR>
+
+" Presentation Mode
+nnoremap <c-s-a-z> :action TogglePresentationMode<CR>
 
 " Runner
 nnoremap ,r :action ChooseRunConfiguration<cr>
