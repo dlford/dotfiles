@@ -23,5 +23,6 @@
     
     // Zen mode
     "zenMode.fullScreen": false,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "window.menuBarVisibility": "toggle"
 }
