@@ -1,7 +1,12 @@
-// Place your key bindings in this file to override the defaults
+/*
+    Plugins:
+    - vscode-neovim
+    - TODO Highlight
+*/
+
 [
     /*
-    // all ctrl/alt shortcuts must be explicitly assigned to vim
+    // all ctrl/alt shortcuts must be explicitly assigned to neovim, e.g.:
     {
         "command": "vscode-neovim.send",
         // the key sequence to activate the binding
@@ -31,7 +36,22 @@
     },
     {
         "command": "workbench.action.reopenClosedEditor",
-        "key": "t D",
+        "key": "t shift+d",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.files.newUntitledFile",
+        "key": "t n",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.moveEditorLeftInGroup",
+        "key": "t shift+m",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.moveEditorRightInGroup",
+        "key": "t m",
         "when": "neovim.mode != insert && editorTextFocus"
     },
     
@@ -82,6 +102,11 @@
     },
     /*
     TODO: m for menu
+    {
+        "key": "m",
+        "command": "workbench.action.toggleMenuBar",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
     */
     
     // Terminal
@@ -100,7 +125,8 @@
     {
         "command": "workbench.action.tasks.runTask",
         "args": "closeSidebarAndPanel",
-        "key": "ctrl+x"
+        "key": "ctrl+x",
+        "when": "!filesExplorerFocus"
     },
     {
         "command": "workbench.action.closeSidebar",
@@ -110,7 +136,14 @@
     {
         "command": "workbench.action.closePanel",
         "key": "escape",
-        "when": "panelFocus"
+        "when": "panelFocus && !terminalFocus"
+    },
+    
+    // Git
+    {
+        "command": "workbench.view.scm",
+        "key": "ctrl+g",
+        "when": "workbench.scm.active"
     },
 
     
