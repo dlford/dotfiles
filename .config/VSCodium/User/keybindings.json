@@ -52,9 +52,14 @@
 
     // Open filetree
     {
-        "command": "-vscode-neovim.send && workbench.view.explorer",
+        "command": "workbench.view.explorer",
         "key": "ctrl+o",
-        "when": "neovim.mode != insert && editorTextFocus && viewContainer.workbench.view.explorer.enabled",
+        "when": "neovim.mode != insert && viewContainer.workbench.view.explorer.enabled",
+    },
+    {
+        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "key": "ctrl+o",
+        "when": "inFilesPicker && inQuickOpen"
     },
     
     // Focus mode
@@ -73,5 +78,12 @@
     {
         "command": "workbench.action.terminal.toggleTerminal",
         "key": "ctrl+t"
+    },
+    
+    // Search
+    {
+        "command": "-vscode-neovim.send && workbench.action.terminal.searchWorkspace",
+        "key": "ctrl+f",
+        "when": "neovim.mode != insert && terminalFocus && terminalProcessSupported && terminalTextSelected"
     },
 ]
