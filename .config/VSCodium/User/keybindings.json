@@ -1,0 +1,77 @@
+// Place your key bindings in this file to override the defaults
+[
+    // all ctrl/alt shortcuts must be explicitly assigned to vim
+    {
+        "command": "vscode-neovim.send",
+        // the key sequence to activate the binding
+        "key": "ctrl+h",
+        // don't activate during insert mode
+        "when": "editorTextFocus && neovim.mode != insert",
+        // the input to send to Neovim
+        "args": "<C-h>"
+    },
+
+    // Tab navigation
+    {
+        "command": "workbench.action.previousEditor",
+        "key": "t h",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.nextEditor",
+        "key": "t l",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.closeActiveEditor",
+        "key": "t d",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    
+    // Split navigation
+    {
+        "command": "workbench.action.focusLeftGroup",
+        "key": "alt+h",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.focusRightGroup",
+        "key": "alt+l",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.focusAboveGroup",
+        "key": "alt+k",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.focusBelowGroup",
+        "key": "alt+j",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+
+    // Open filetree
+    {
+        "command": "-vscode-neovim.send && workbench.view.explorer",
+        "key": "ctrl+o",
+        "when": "neovim.mode != insert && editorTextFocus && viewContainer.workbench.view.explorer.enabled",
+    },
+    
+    // Focus mode
+    {
+        "command": "workbench.action.toggleZenMode",
+        "key": "ctrl+z"
+    },
+    
+    // Sidebar
+    {
+        "command": "workbench.action.toggleSidebarVisibility",
+        "key": "ctrl+x"
+    },
+    
+    // Terminal
+    {
+        "command": "workbench.action.terminal.toggleTerminal",
+        "key": "ctrl+t"
+    },
+]
