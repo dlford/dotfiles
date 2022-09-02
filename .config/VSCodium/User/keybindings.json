@@ -1,9 +1,3 @@
-/*
-    Plugins:
-    - vscode-neovim
-    - TODO Highlight
-*/
-
 [
     /*
     // all ctrl/alt shortcuts must be explicitly assigned to neovim, e.g.:
@@ -45,13 +39,23 @@
         "when": "neovim.mode != insert && editorTextFocus"
     },
     {
+        "command": "workbench.action.moveEditorRightInGroup",
+        "key": "t m",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
         "command": "workbench.action.moveEditorLeftInGroup",
         "key": "t shift+m",
         "when": "neovim.mode != insert && editorTextFocus"
     },
     {
-        "command": "workbench.action.moveEditorRightInGroup",
-        "key": "t m",
+        "command": "workbench.action.moveEditorToRightGroup",
+        "key": "t t",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.moveEditorToLeftGroup",
+        "key": "t shift+t",
         "when": "neovim.mode != insert && editorTextFocus"
     },
     
@@ -84,9 +88,14 @@
         "when": "neovim.mode != insert && viewContainer.workbench.view.explorer.enabled",
     },
     {
-        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "command": "workbench.action.files.openFile",
         "key": "ctrl+o",
-        "when": "inFilesPicker && inQuickOpen"
+        "when": "explorerViewletFocus"
+    },
+    {
+        "command": "workbench.action.files.openFileFolder",
+        "key": "ctrl+shift+o",
+        "when": "explorerViewletFocus"
     },
     {
         "key": "enter",
@@ -152,6 +161,11 @@
         "command": "-vscode-neovim.ctrl-f",
         "key": "ctrl+f",
         "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "command": "explorer.openToSide",
+        "key": "ctrl+v",
+        "when": "inQuickOpen"
     },
     {
         "command": "workbench.action.terminal.searchWorkspace",

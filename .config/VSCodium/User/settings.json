@@ -1,3 +1,10 @@
+/*
+    Plugins:
+    - vscode-neovim
+    - contextually
+    - [ ] TODO Highlight
+*/
+
 {
     // Theme
     "workbench.colorTheme": "GitHub Dark Dimmed",
