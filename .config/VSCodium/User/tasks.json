@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // Sidebar and Panel
+        {
+            "label": "closeSidebar",
+            "command": "${command:workbench.action.closeSidebar}"
+        },
+        {
+            "label": "closePanel",
+            "command": "${command:workbench.action.closePanel}"
+        },
+        {
+            "label": "closeSidebarAndPanel",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "closeSidebar",
+                "closePanel",
+            ]
+        },
+    ]
+}

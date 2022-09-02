@@ -27,6 +27,11 @@
         "key": "t d",
         "when": "neovim.mode != insert && editorTextFocus"
     },
+    {
+        "command": "workbench.action.reopenClosedEditor",
+        "key": "t D",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
     
     // Split navigation
     {
@@ -62,28 +67,45 @@
         "when": "inFilesPicker && inQuickOpen"
     },
     
-    // Focus mode
-    {
-        "command": "workbench.action.toggleZenMode",
-        "key": "ctrl+z"
-    },
-    
-    // Sidebar
-    {
-        "command": "workbench.action.toggleSidebarVisibility",
-        "key": "ctrl+x"
-    },
-    
     // Terminal
     {
         "command": "workbench.action.terminal.toggleTerminal",
         "key": "ctrl+t"
     },
     
+    // Focus mode
+    {
+        "command": "workbench.action.toggleZenMode",
+        "key": "ctrl+z"
+    },
+    
+    // Sidebar and Panel
+    {
+        "command": "workbench.action.tasks.runTask",
+        "args": "closeSidebarAndPanel",
+        "key": "ctrl+x"
+    },
+    {
+        "command": "workbench.action.closeSidebar",
+        "key": "escape",
+        "when": "sideBarFocus"
+    },
+    {
+        "command": "workbench.action.closePanel",
+        "key": "escape",
+        "when": "panelFocus"
+    },
+
+    
     // Search
     {
-        "command": "-vscode-neovim.send && workbench.action.terminal.searchWorkspace",
+        "command": "-vscode-neovim.ctrl-f",
         "key": "ctrl+f",
-        "when": "neovim.mode != insert && terminalFocus && terminalProcessSupported && terminalTextSelected"
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "command": "workbench.action.terminal.searchWorkspace",
+        "key": "ctrl+f",
+        "when": "neovim.mode != 'insert'"
     },
 ]

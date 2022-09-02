@@ -22,5 +22,6 @@
     },
     
     // Zen mode
-    "zenMode.fullScreen": false
+    "zenMode.fullScreen": false,
+    "workbench.startupEditor": "none"
 }
