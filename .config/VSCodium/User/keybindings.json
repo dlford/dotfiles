@@ -1,5 +1,6 @@
 // Place your key bindings in this file to override the defaults
 [
+    /*
     // all ctrl/alt shortcuts must be explicitly assigned to vim
     {
         "command": "vscode-neovim.send",
@@ -10,6 +11,7 @@
         // the input to send to Neovim
         "args": "<C-h>"
     },
+    */
 
     // Tab navigation
     {
@@ -55,7 +57,7 @@
         "when": "neovim.mode != insert && editorTextFocus"
     },
 
-    // Open filetree
+    // File Explorer
     {
         "command": "workbench.view.explorer",
         "key": "ctrl+o",
@@ -66,6 +68,18 @@
         "key": "ctrl+o",
         "when": "inFilesPicker && inQuickOpen"
     },
+    {
+        "key": "v",
+        "command": "explorer.openToSide",
+        "when": "filesExplorerFocus"
+    },
+    /*
+    TODO: m for menu
+    TOODO: task for open file then close explorer
+{ "key": "enter",                 "command": "explorer.openAndPassFocus",
+                                     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus" },
+
+    */
     
     // Terminal
     {
