@@ -69,16 +69,19 @@
         "when": "inFilesPicker && inQuickOpen"
     },
     {
+        "key": "enter",
+        "command": "workbench.action.tasks.runTask",
+        "args": "openFileAndCloseSidebar",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+    },
+    {
         "key": "v",
-        "command": "explorer.openToSide",
-        "when": "filesExplorerFocus"
+        "command": "workbench.action.tasks.runTask",
+        "args": "openFileVerticalAndCloseSidebar",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
     },
     /*
     TODO: m for menu
-    TOODO: task for open file then close explorer
-{ "key": "enter",                 "command": "explorer.openAndPassFocus",
-                                     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus" },
-
     */
     
     // Terminal
