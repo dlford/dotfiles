@@ -13,6 +13,7 @@
     */
 
     // Tab navigation
+    // TODO: breaks rt
     {
         "command": "workbench.action.previousEditor",
         "key": "t h",
@@ -109,6 +110,11 @@
         "args": "openFileVerticalAndCloseSidebar",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
     },
+    {
+        "command": "todohighlight.listAnnotations",
+        "key": "ctrl+shift+t",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
     /*
     TODO: m for menu
     {
@@ -171,5 +177,5 @@
         "command": "workbench.action.terminal.searchWorkspace",
         "key": "ctrl+f",
         "when": "neovim.mode != 'insert'"
-    },
+    }
 ]
