@@ -1,0 +1,111 @@
+// Place your key bindings in this file to override the defaults
+[
+    // all ctrl/alt shortcuts must be explicitly assigned to vim
+    {
+        "command": "vscode-neovim.send",
+        // the key sequence to activate the binding
+        "key": "ctrl+h",
+        // don't activate during insert mode
+        "when": "editorTextFocus && neovim.mode != insert",
+        // the input to send to Neovim
+        "args": "<C-h>"
+    },
+
+    // Tab navigation
+    {
+        "command": "workbench.action.previousEditor",
+        "key": "t h",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.nextEditor",
+        "key": "t l",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.closeActiveEditor",
+        "key": "t d",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.reopenClosedEditor",
+        "key": "t D",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    
+    // Split navigation
+    {
+        "command": "workbench.action.focusLeftGroup",
+        "key": "alt+h",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.focusRightGroup",
+        "key": "alt+l",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.focusAboveGroup",
+        "key": "alt+k",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.focusBelowGroup",
+        "key": "alt+j",
+        "when": "neovim.mode != insert && editorTextFocus"
+    },
+
+    // Open filetree
+    {
+        "command": "workbench.view.explorer",
+        "key": "ctrl+o",
+        "when": "neovim.mode != insert && viewContainer.workbench.view.explorer.enabled",
+    },
+    {
+        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "key": "ctrl+o",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    
+    // Terminal
+    {
+        "command": "workbench.action.terminal.toggleTerminal",
+        "key": "ctrl+t"
+    },
+    
+    // Focus mode
+    {
+        "command": "workbench.action.toggleZenMode",
+        "key": "ctrl+z"
+    },
+    
+    // Sidebar and Panel
+    {
+        "command": "workbench.action.tasks.runTask",
+        "args": "closeSidebarAndPanel",
+        "key": "ctrl+x"
+    },
+    {
+        "command": "workbench.action.closeSidebar",
+        "key": "escape",
+        "when": "sideBarFocus"
+    },
+    {
+        "command": "workbench.action.closePanel",
+        "key": "escape",
+        "when": "panelFocus"
+    },
+
+    
+    // Search
+    {
+        "command": "-vscode-neovim.ctrl-f",
+        "key": "ctrl+f",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "command": "workbench.action.terminal.searchWorkspace",
+        "key": "ctrl+f",
+        "when": "neovim.mode != 'insert'"
+    },
+]
