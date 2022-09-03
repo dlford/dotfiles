@@ -22,6 +22,12 @@
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
     },
     {
+        "key": "l",
+        "command": "workbench.action.tasks.runTask",
+        "args": "openFileAndCloseSidebar",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+    },
+    {
         "key": "v",
         "command": "workbench.action.tasks.runTask",
         "args": "openFileVerticalAndCloseSidebar",
