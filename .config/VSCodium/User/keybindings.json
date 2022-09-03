@@ -107,7 +107,23 @@
         "key": "ctrl+g",
         "when": "workbench.scm.active"
     },
-
+    {
+        "command": "git.stageAll",
+        "key": "shift+s",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
+    {
+        "command": "git.unstageAll",
+        "key": "shift+u",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
+    /* TODO:
+    {
+        "command": "git.stageSelectedRanges",
+        "key": "s",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
+    */
     
     /* Search */
     {
