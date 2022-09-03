@@ -16,6 +16,12 @@
     "git.autofetch": true,
     "workbench.editor.enablePreview": false,
     "workbench.list.openMode": "doubleClick",
+    "[typescript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
     
     // Vim
     "vim": {
@@ -254,7 +260,4 @@
         "OPTIMIZE:",
         "BUG:",
     ],
-    "[typescript]": {
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-    },
 }
