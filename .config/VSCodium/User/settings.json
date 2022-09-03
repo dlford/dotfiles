@@ -1,30 +1,157 @@
 /*
     Plugins:
-    - vscode-neovim
+    - vscodevim
     - TODO Highlight TODO: Finish config
+    - GitHub theme
+    - Emmet
 */
 
 {
     // Theme
     "workbench.colorTheme": "GitHub Dark Dimmed",
     
-    // Neovim
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-    "vscode-neovim.highlightGroups.highlights": {
-        "Directory": "vim",
-        "IncSearch": {
-            "backgroundColor": "theme.editor.findMatchBackground",
-            "borderColor": "theme.editor.findMatchBorder"
+    // Vim
+    "vim": {
+        /* Start requires Neovim installed */
+        "enableNeovim": true,
+        "neovimPath": "/usr/bin/nvim",
+        "neovimUseConfigFile": true,
+        "neovimConfigPath": "~/.config/VSCodium/User/init.vim",
+        /* End requires Neovim installed */
+        "easymotion": true,
+        "surround": true,
+        "incsearch": true,
+        "useSystemClipboard": true,
+        "useCtrlKeys": true,
+        "hlsearch": true,
+        "leader": ",",
+        "highlightedyank.enable": true,
+        "highlightedyank.duration": 500,
+        "handleKeys": {
+            "<C-a>": false,
+            "<C-f>": false
         },
-        "Search": {
-            "backgroundColor": "theme.editor.findMatchHighlightBackground",
-            "borderColor": "theme.editor.findMatchHighlightBorder"
-        },
-        "Visual": {
-            "backgroundColor": "theme.editor.selectionBackground"
-        },
-        "Conceal": "vim",
-        "Substitute": "vim"
+        "insertModeKeyBindings": [
+            /*
+            {
+                "before": ["j", "j"],
+                "after": ["<Esc>"]
+            }
+            */
+        ],
+        "normalModeKeyBindings": [
+            /* Tab Navigation */
+            // Next tab
+            {
+                "before": [ "t", "l" ],
+                "commands": [
+                    "workbench.action.nextEditor"
+                ],
+            },
+            // Prev tab
+            {
+                "before": [ "t", "h" ],
+                "commands": [
+                    "workbench.action.previousEditor"
+                ],
+            },
+            // Close tab
+            {
+                "before": [ "t", "d" ],
+                "commands": [
+                    "workbench.action.closeActiveEditor"
+                ],
+            },
+            // Reopen tab
+            {
+                "before": [ "t", "D" ],
+                "commands": [
+                    "workbench.action.reopenClosedEditor"
+                ],
+            },
+            // New tab
+            {
+                "before": [ "t", "n" ],
+                "commands": [
+                    "workbench.action.files.newUntitledFile"
+                ],
+            },
+            // Move tab left
+            {
+                "before": [ "t", "m", "h" ],
+                "commands": [
+                    "workbench.action.moveEditorLeftInGroup"
+                ],
+            },
+            // Move tab right
+            {
+                "before": [ "t", "m", "l" ],
+                "commands": [
+                    "workbench.action.moveEditorRightInGroup"
+                ],
+            },
+            // Split tab left
+            {
+                "before": [ "t", "t", "h" ],
+                "commands": [
+                    "workbench.action.moveEditorToLeftGroup"
+                ],
+            },
+            // Split tab right
+            {
+                "before": [ "t", "t", "l" ],
+                "commands": [
+                    "workbench.action.moveEditorToRightGroup"
+                ],
+            },
+            /* Split Navigation */
+            {
+                "before": [ "alt", "h" ],
+                "commands": [
+                    "workbench.action.focusLeftGroup"
+                ],
+            },
+            {
+                "before": [ "alt", "l" ],
+                "commands": [
+                    "workbench.action.focusRightGroup"
+                ],
+            },
+            {
+                "before": [ "alt", "k" ],
+                "commands": [
+                    "workbench.action.focusAboveGroup"
+                ],
+            },
+            {
+                "before": [ "alt", "j" ],
+                "commands": [
+                    "workbench.action.focusBelowGroup"
+                ],
+            },
+        ],
+        "normalModeKeyBindingsNonRecursive": [
+            {
+                "before": ["f"],
+                "after": ["<leader>", "<leader>", "s"],
+            },
+            /* Examples */
+            /*
+            {
+                "before": ["<leader>", "d"],
+                "after": ["d", "d"]
+            },
+            {
+                "before": ["<C-n>"],
+                "commands": [":nohl"]
+            },
+            {
+                "before": ["K"],
+                "commands": ["lineBreakInsert"],
+                "silent": true
+            }
+            */
+        ],
     },
     
     // Zen mode
@@ -60,7 +187,7 @@
         "backgroundColor": "#ffab00",
         "overviewRulerColor": "#ffab00",
         "cursor": "pointer",
-        "border": "1px solid #eee",
+        // "border": "1px solid #eee",
         "borderRadius": "2px",
         "isWholeLine": false,
     },
@@ -69,20 +196,17 @@
         "REVIEW:",
         {
             "text": "NOTE:",
-            "color": "#ff0000",
-            "backgroundColor": "yellow",
-            "overviewRulerColor": "grey"
+            "backgroundColor": "#5c89e2",
         },
         {
             "text": "HACK:",
             "color": "#000",
-            "backgroundColor": "red",
+            "backgroundColor": "#E25C5C",
         },
         {
             "text": "TODO:",
-            "color": "#ff0000",
+            "color": "black",
             "backgroundColor": "yellow",
-            "overviewRulerColor": "grey"
         }
     ],
 }
