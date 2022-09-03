@@ -8,8 +8,7 @@
 {
     // Theme
     "workbench.colorTheme": "GitHub Dark Dimmed",
-    "editor.fontFamily": "'JetBrains Mono', 'MesloLGSDZ Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
-    "terminal.integrated.fontFamily": "MesloLGSDZ Nerd Font Mono",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'MesloLGSDZ Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
 
     // General
     "git.enableSmartCommit": true,
