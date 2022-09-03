@@ -70,6 +70,16 @@
         "key": "ctrl+shift+t",
         "when": "editorTextFocus"
     },
+    {
+        "command": "explorer.openToSide",
+        "key": "ctrl+v",
+        "when": "inQuickOpen"
+    },
+    {
+        "command": "workbench.action.terminal.searchWorkspace",
+        "key": "ctrl+f",
+        "when": "editorTextFocus"
+    },
     
     /* Terminal */
     {
@@ -109,31 +119,37 @@
     },
     {
         "command": "git.stageAll",
-        "key": "shift+s",
+        "key": "ctrl+shift+s",
         "when": "sideBarFocus && view.workbench.scm.visible"
     },
     {
         "command": "git.unstageAll",
-        "key": "shift+u",
+        "key": "ctrl+shift+u",
         "when": "sideBarFocus && view.workbench.scm.visible"
     },
-    /* TODO:
     {
-        "command": "git.stageSelectedRanges",
-        "key": "s",
+        "command": "git.stage",
+        "key": "ctrl+s",
         "when": "sideBarFocus && view.workbench.scm.visible"
     },
-    */
-    
-    /* Search */
     {
-        "command": "explorer.openToSide",
-        "key": "ctrl+v",
-        "when": "inQuickOpen"
+        "command": "git.unstage",
+        "key": "ctrl+u",
+        "when": "sideBarFocus && view.workbench.scm.visible"
     },
     {
-        "command": "workbench.action.terminal.searchWorkspace",
-        "key": "ctrl+f",
-        "when": "editorTextFocus"
-    }
+        "command": "git.commit",
+        "key": "ctrl+c",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
+    {
+        "command": "git.push",
+        "key": "ctrl+shift+p",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
+    {
+        "command": "git.pull",
+        "key": "ctrl+p",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
 ]
