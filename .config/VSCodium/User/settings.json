@@ -209,4 +209,6 @@
             "backgroundColor": "yellow",
         }
     ],
+    "editor.fontFamily": "'JetBrains Mono', 'MesloLGSDZ Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "terminal.integrated.fontFamily": "MesloLGSDZ Nerd Font Mono",
 }
