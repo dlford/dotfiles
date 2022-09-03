@@ -32,14 +32,6 @@
         "key": "ctrl+shift+t",
         "when": "editorTextFocus"
     },
-    /*
-    TODO: m for menu
-    {
-        "key": "m",
-        "command": "workbench.action.toggleMenuBar",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-    },
-    */
     
     /* Terminal */
     {
