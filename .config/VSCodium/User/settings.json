@@ -2,7 +2,8 @@
     Plugins:
     - vscodevim/vim
     - wayou/TODO Highlight
-    - GitHug/GitHub Theme
+    - GitHub/GitHub Theme
+    - rvest/Prettier ESLint
 */
 
 {
@@ -15,12 +16,6 @@
     "git.autofetch": true,
     "workbench.editor.enablePreview": false,
     "workbench.list.openMode": "doubleClick",
-    "[typescript]": {
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-    },
     
     // Vim
     "vim": {
@@ -43,6 +38,15 @@
             "<C-a>": false,
             "<C-f>": false
         },
+        "visualModeKeyBindings": [
+            {
+                "before": ["f"],
+                "commands": [
+                    "editor.action.formatSelection",
+                    "extension.vim_escape",
+                ],
+            },
+        ],
         "insertModeKeyBindings": [
             /*
             {
@@ -259,4 +263,21 @@
         "OPTIMIZE:",
         "BUG:",
     ],
+
+    // Formatters
+    "[typescript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "sync.removeExtensions": false,
+    "sync.gist": "2ef28643353e62f278e9d02c511c86ca",
+
 }
