@@ -1,4 +1,14 @@
 [
+    /* Window Navigation */
+    {
+        "command": "workbench.action.quickSwitchWindow",
+        "key": "ctrl+shift+w",
+    },
+    {
+        "command": "workbench.action.focusActiveEditorGroup",
+        "key": "alt+e",
+    },
+
     /* File Explorer */
     {
         "command": "workbench.view.explorer",
