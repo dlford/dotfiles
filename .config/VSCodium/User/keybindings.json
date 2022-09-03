@@ -1,4 +1,36 @@
 [
+    /* Code Quality */
+    {
+        "command": "editor.action.formatDocument",
+        "key": "shift+alt+f",
+    },
+    {
+        "command": "editor.action.marker.next",
+        "key": "alt+e",
+        "when": "editorFocus",
+    },
+    {
+        "command": "editor.action.marker.prev",
+        "key": "shift+alt+e",
+        "when": "editorFocus",
+    },
+    {
+        "command": "closeMarkersNavigation",
+        "key": "escape",
+        "when": "markersNavigationVisible && editorFocus",
+    },
+
+    /* Window Navigation */
+    {
+        "command": "workbench.action.quickSwitchWindow",
+        "key": "ctrl+tab",
+    },
+    {
+        "command": "workbench.action.focusActiveEditorGroup",
+        "key": "escape",
+        "when": "!sideBarFocus && !panelFocus && !editorFocus"
+    },
+
     /* File Explorer */
     {
         "command": "workbench.view.explorer",
@@ -22,6 +54,12 @@
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
     },
     {
+        "key": "l",
+        "command": "workbench.action.tasks.runTask",
+        "args": "openFileAndCloseSidebar",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+    },
+    {
         "key": "v",
         "command": "workbench.action.tasks.runTask",
         "args": "openFileVerticalAndCloseSidebar",
@@ -32,14 +70,16 @@
         "key": "ctrl+shift+t",
         "when": "editorTextFocus"
     },
-    /*
-    TODO: m for menu
     {
-        "key": "m",
-        "command": "workbench.action.toggleMenuBar",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+        "command": "explorer.openToSide",
+        "key": "ctrl+v",
+        "when": "inQuickOpen"
     },
-    */
+    {
+        "command": "workbench.action.terminal.searchWorkspace",
+        "key": "ctrl+f",
+        "when": "editorTextFocus"
+    },
     
     /* Terminal */
     {
@@ -77,17 +117,39 @@
         "key": "ctrl+g",
         "when": "workbench.scm.active"
     },
-
-    
-    /* Search */
     {
-        "command": "explorer.openToSide",
-        "key": "ctrl+v",
-        "when": "inQuickOpen"
+        "command": "git.stageAll",
+        "key": "ctrl+shift+s",
+        "when": "sideBarFocus && view.workbench.scm.visible"
     },
     {
-        "command": "workbench.action.terminal.searchWorkspace",
-        "key": "ctrl+f",
-        "when": "editorTextFocus"
-    }
+        "command": "git.unstageAll",
+        "key": "ctrl+shift+u",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
+    {
+        "command": "git.stage",
+        "key": "ctrl+s",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
+    {
+        "command": "git.unstage",
+        "key": "ctrl+u",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
+    {
+        "command": "git.commit",
+        "key": "ctrl+c",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
+    {
+        "command": "git.push",
+        "key": "ctrl+shift+p",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
+    {
+        "command": "git.pull",
+        "key": "ctrl+p",
+        "when": "sideBarFocus && view.workbench.scm.visible"
+    },
 ]

@@ -1,14 +1,21 @@
 /*
     Plugins:
-    - vscodevim
-    - TODO Highlight TODO: Finish config
-    - GitHub theme
-    - Emmet
+    - vscodevim/vim
+    - wayou/TODO Highlight
+    - GitHub/GitHub Theme
+    - rvest/Prettier ESLint
 */
 
 {
     // Theme
     "workbench.colorTheme": "GitHub Dark Dimmed",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'MesloLGSDZ Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
+
+    // General
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.list.openMode": "doubleClick",
     
     // Vim
     "vim": {
@@ -31,6 +38,15 @@
             "<C-a>": false,
             "<C-f>": false
         },
+        "visualModeKeyBindings": [
+            {
+                "before": ["f"],
+                "commands": [
+                    "editor.action.formatSelection",
+                    "extension.vim_escape",
+                ],
+            },
+        ],
         "insertModeKeyBindings": [
             /*
             {
@@ -60,6 +76,13 @@
                 "before": [ "t", "d" ],
                 "commands": [
                     "workbench.action.closeActiveEditor"
+                ],
+            },
+            // Close all other tabs
+            {
+                "before": [ "t", "o" ],
+                "commands": [
+                    "workbench.action.closeOtherEditors"
                 ],
             },
             // Reopen tab
@@ -183,30 +206,78 @@
         "**/.next/**"
     ],
     "todohighlight.defaultStyle": {
-        "color": "black",
-        "backgroundColor": "#ffab00",
+        "color": "white",
+        "backgroundColor": "#AC2C2C",
         "overviewRulerColor": "#ffab00",
         "cursor": "pointer",
         // "border": "1px solid #eee",
-        "borderRadius": "2px",
+        "borderRadius": "3px",
         "isWholeLine": false,
     },
     "todohighlight.keywords": [
-        "DEBUG:",
-        "REVIEW:",
         {
             "text": "NOTE:",
-            "backgroundColor": "#5c89e2",
+            "backgroundColor": "#3E63AD",
         },
         {
-            "text": "HACK:",
-            "color": "#000",
-            "backgroundColor": "#E25C5C",
+            "text": "INFO:",
+            "backgroundColor": "#3E63AD",
         },
         {
             "text": "TODO:",
             "color": "black",
             "backgroundColor": "yellow",
-        }
+        },
+        {
+            "text": "BACKLOG:",
+            "color": "black",
+            "backgroundColor": "#BA9B2D",
+        },
+        {
+            "text": "HACK:",
+            "color": "black",
+            "backgroundColor": "#BA9B2D",
+        },
+        {
+            "text": "WARN:",
+            "color": "black",
+            "backgroundColor": "#BA9B2D",
+        },
+        {
+            "text": "WARNING:",
+            "color": "black",
+            "backgroundColor": "#BA9B2D",
+        },
+        {
+            "text": "FIXME:",
+            "backgroundColor": "#AC2C2C",
+        },
+        "DEBUG:",
+        "REVIEW:",
+        "FIX:",
+        "FIXIT:",
+        "ISSUE:",
+        "PERF:",
+        "PERFORMANCE:",
+        "OPTIM:",
+        "OPTIMIZE:",
+        "BUG:",
     ],
+
+    // Formatters
+    "[typescript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "sync.removeExtensions": false,
+    "sync.gist": "2ef28643353e62f278e9d02c511c86ca",
+
 }
