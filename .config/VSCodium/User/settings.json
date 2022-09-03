@@ -1,14 +1,15 @@
 /*
     Plugins:
-    - vscodevim
-    - TODO Highlight TODO: Finish config
-    - GitHub theme
-    - Emmet
+    - vscodevim/vim
+    - wayou/TODO Highlight
+    - GitHug/GitHub Theme
 */
 
 {
     // Theme
     "workbench.colorTheme": "GitHub Dark Dimmed",
+    "editor.fontFamily": "'JetBrains Mono', 'MesloLGSDZ Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "terminal.integrated.fontFamily": "MesloLGSDZ Nerd Font Mono",
     
     // Vim
     "vim": {
@@ -183,32 +184,61 @@
         "**/.next/**"
     ],
     "todohighlight.defaultStyle": {
-        "color": "black",
-        "backgroundColor": "#ffab00",
+        "color": "white",
+        "backgroundColor": "#AC2C2C",
         "overviewRulerColor": "#ffab00",
         "cursor": "pointer",
         // "border": "1px solid #eee",
-        "borderRadius": "2px",
+        "borderRadius": "3px",
         "isWholeLine": false,
     },
     "todohighlight.keywords": [
-        "DEBUG:",
-        "REVIEW:",
         {
             "text": "NOTE:",
-            "backgroundColor": "#5c89e2",
+            "backgroundColor": "#3E63AD",
         },
         {
-            "text": "HACK:",
-            "color": "#000",
-            "backgroundColor": "#E25C5C",
+            "text": "INFO:",
+            "backgroundColor": "#3E63AD",
         },
         {
             "text": "TODO:",
             "color": "black",
             "backgroundColor": "yellow",
-        }
+        },
+        {
+            "text": "BACKLOG:",
+            "color": "black",
+            "backgroundColor": "#BA9B2D",
+        },
+        {
+            "text": "HACK:",
+            "color": "black",
+            "backgroundColor": "#BA9B2D",
+        },
+        {
+            "text": "WARN:",
+            "color": "black",
+            "backgroundColor": "#BA9B2D",
+        },
+        {
+            "text": "WARNING:",
+            "color": "black",
+            "backgroundColor": "#BA9B2D",
+        },
+        {
+            "text": "FIXME:",
+            "backgroundColor": "#AC2C2C",
+        },
+        "DEBUG:",
+        "REVIEW:",
+        "FIX:",
+        "FIXIT:",
+        "ISSUE:",
+        "PERF:",
+        "PERFORMANCE:",
+        "OPTIM:",
+        "OPTIMIZE:",
+        "BUG:",
     ],
-    "editor.fontFamily": "'JetBrains Mono', 'MesloLGSDZ Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
-    "terminal.integrated.fontFamily": "MesloLGSDZ Nerd Font Mono",
 }
