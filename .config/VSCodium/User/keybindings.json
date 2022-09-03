@@ -1,12 +1,34 @@
 [
+    /* Code Quality */
+    {
+        "command": "editor.action.formatDocument",
+        "key": "shift+alt+f",
+    },
+    {
+        "command": "editor.action.marker.next",
+        "key": "alt+e",
+        "when": "editorFocus",
+    },
+    {
+        "command": "editor.action.marker.prev",
+        "key": "shift+alt+e",
+        "when": "editorFocus",
+    },
+    {
+        "command": "closeMarkersNavigation",
+        "key": "escape",
+        "when": "markersNavigationVisible && editorFocus",
+    },
+
     /* Window Navigation */
     {
         "command": "workbench.action.quickSwitchWindow",
-        "key": "ctrl+shift+w",
+        "key": "ctrl+tab",
     },
     {
         "command": "workbench.action.focusActiveEditorGroup",
-        "key": "alt+e",
+        "key": "escape",
+        "when": "!sideBarFocus && !panelFocus && !editorFocus"
     },
 
     /* File Explorer */
