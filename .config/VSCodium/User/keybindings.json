@@ -1,92 +1,9 @@
 [
-    /*
-    // all ctrl/alt shortcuts must be explicitly assigned to neovim, e.g.:
-    {
-        "command": "vscode-neovim.send",
-        // the key sequence to activate the binding
-        "key": "ctrl+h",
-        // don't activate during insert mode
-        "when": "editorTextFocus && neovim.mode != insert",
-        // the input to send to Neovim
-        "args": "<C-h>"
-    },
-    */
-
-    // Tab navigation
-    // TODO: breaks rt
-    {
-        "command": "workbench.action.previousEditor",
-        "key": "t h",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.nextEditor",
-        "key": "t l",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.closeActiveEditor",
-        "key": "t d",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.reopenClosedEditor",
-        "key": "t shift+d",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.files.newUntitledFile",
-        "key": "t n",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.moveEditorRightInGroup",
-        "key": "t m",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.moveEditorLeftInGroup",
-        "key": "t shift+m",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.moveEditorToRightGroup",
-        "key": "t t",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.moveEditorToLeftGroup",
-        "key": "t shift+t",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    
-    // Split navigation
-    {
-        "command": "workbench.action.focusLeftGroup",
-        "key": "alt+h",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.focusRightGroup",
-        "key": "alt+l",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.focusAboveGroup",
-        "key": "alt+k",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-    {
-        "command": "workbench.action.focusBelowGroup",
-        "key": "alt+j",
-        "when": "neovim.mode != insert && editorTextFocus"
-    },
-
-    // File Explorer
+    /* File Explorer */
     {
         "command": "workbench.view.explorer",
         "key": "ctrl+o",
-        "when": "neovim.mode != insert && viewContainer.workbench.view.explorer.enabled",
+        "when": "viewContainer.workbench.view.explorer.enabled",
     },
     {
         "command": "workbench.action.files.openFile",
@@ -113,7 +30,7 @@
     {
         "command": "todohighlight.listAnnotations",
         "key": "ctrl+shift+t",
-        "when": "neovim.mode != insert && editorTextFocus"
+        "when": "editorTextFocus"
     },
     /*
     TODO: m for menu
@@ -124,19 +41,19 @@
     },
     */
     
-    // Terminal
+    /* Terminal */
     {
         "command": "workbench.action.terminal.toggleTerminal",
         "key": "ctrl+t"
     },
     
-    // Focus mode
+    /* Focus mode */
     {
         "command": "workbench.action.toggleZenMode",
         "key": "ctrl+z"
     },
     
-    // Sidebar and Panel
+    /* Sidebar and Panel */
     {
         "command": "workbench.action.tasks.runTask",
         "args": "closeSidebarAndPanel",
@@ -154,7 +71,7 @@
         "when": "panelFocus && !terminalFocus"
     },
     
-    // Git
+    /* Git */
     {
         "command": "workbench.view.scm",
         "key": "ctrl+g",
@@ -162,12 +79,7 @@
     },
 
     
-    // Search
-    {
-        "command": "-vscode-neovim.ctrl-f",
-        "key": "ctrl+f",
-        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
-    },
+    /* Search */
     {
         "command": "explorer.openToSide",
         "key": "ctrl+v",
@@ -176,6 +88,6 @@
     {
         "command": "workbench.action.terminal.searchWorkspace",
         "key": "ctrl+f",
-        "when": "neovim.mode != 'insert'"
+        "when": "editorTextFocus"
     }
 ]
