@@ -1,9 +1,9 @@
 env:
   TERM: xterm-256color
 window:
-  decorations: none
+  #decorations: none
   dynamic_title: false
-  gtk_theme_variatn: dark
+  gtk_theme_variant: dark
 shell:
   program: /bin/zsh
   args:
