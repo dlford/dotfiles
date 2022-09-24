@@ -10,7 +10,7 @@ cursor:
 font:
   size: 11
   normal:
-    family: "CaskaydiaCove Nerd Font Mono"
+    family: "JetBrainsMono NFM"
 colors:
   primary:
     background: '#282c34'
