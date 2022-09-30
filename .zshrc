@@ -1,5 +1,7 @@
 # Install OhMyZsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.local/bin:$PATH
@@ -74,7 +76,40 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt docker docker-compose archlinux colorize web-search)
+plugins=(
+  ansible
+  fzf
+  git
+  git-prompt
+  git-auto-fetch
+  git-extras
+  gitignore
+  golang
+  kubectl
+  minikube
+  node
+  npm
+  postgres
+  rsync
+  safe-paste
+  ssh-agent
+  sudo
+  systemd
+  systemadmin
+  terraform
+  tmux
+  vim-interaction
+  vscode
+  web-search
+  docker
+  docker-compose
+  archlinux
+  colorize
+  web-search
+  npm
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,9 +143,9 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # If vte.sh is not found:
 #   ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-  source /etc/profile.d/vte.sh
-fi
+# if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+# 	source /etc/profile.d/vte.sh
+# fi
 
 # This loads nvm
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
