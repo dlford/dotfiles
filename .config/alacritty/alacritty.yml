@@ -15,7 +15,7 @@ cursor:
 font:
   size: 6.0
   normal:
-    family: "MesloLGSDZ Nerd Font Mono"
+    family: "JetBrainsMono Nerd Font Mono"
     style: Regular
 colors:
   primary:
