@@ -59,7 +59,7 @@ module.exports = {
         // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
         showWindowControls: '',
         // custom padding (CSS format, i.e.: `top right bottom left`)
-        padding: '0',
+        padding: '6px 0',
         // the full list. if you're going to provide the full color palette,
         // including the 6 x 6 color cubes and the grayscale map, just provide
         // an array here instead of a color map object
@@ -146,7 +146,16 @@ module.exports = {
     //   `hyperpower`
     //   `@company/project`
     //   `project#1.0.1`
-    plugins: ["hyper-github-dark"],
+    plugins: [
+        // 'hyper-statusline',
+        'hyper-github-dark',
+        'hypercwd',
+        'hyperterm-paste',
+        'hyper-alt-click',
+        'hyper-tabs-enhanced',
+        'hyper-hide-title',
+        'hyper-hover-header',
+    ],
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here
     // to load it and avoid it being `npm install`ed
