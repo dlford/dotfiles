@@ -93,6 +93,7 @@ plugins=(
   rsync
   safe-paste
   ssh-agent
+  gpg-agent
   sudo
   systemd
   systemadmin
