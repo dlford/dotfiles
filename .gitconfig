@@ -1,6 +1,7 @@
 [user]
 	name = dlford
 	email = dan-github2@dlford.co
+	signingkey = 220C430A0FA6C63A8BCA928E9757291A7976BA76
 [push]
 	default = simple
 [credential]
@@ -13,3 +14,5 @@
 	colorMoved = zebra
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
