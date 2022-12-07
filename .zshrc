@@ -74,7 +74,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt docker docker-compose archlinux colorize web-search)
+plugins=(git git-prompt ssh-agent gpg-agent docker docker-compose archlinux colorize web-search)
 
 source $ZSH/oh-my-zsh.sh
 
