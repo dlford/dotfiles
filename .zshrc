@@ -4,7 +4,8 @@
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:$PATH
+export GOPATH="$HOME/go"
+export PATH=$HOME/.local/bin:/usr/local/go/bin:$GOPATH/bin:$PATH
 
 DEFAULT_USER="dan"
 
