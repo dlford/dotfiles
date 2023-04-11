@@ -5,7 +5,10 @@
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.local/bin:$PATH
-export GPG_TTY=$(tty)
+
+# GPG Yubikey
+#export GPG_TTY=$(tty)
+sh -c "~/.local/bin/gpg-agent-relay.sh &"
 
 DEFAULT_USER="dan"
 
@@ -94,7 +97,7 @@ plugins=(
   rsync
   safe-paste
   ssh-agent
-  gpg-agent
+  # gpg-agent
   sudo
   systemd
   systemadmin
