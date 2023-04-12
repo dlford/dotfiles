@@ -6,10 +6,6 @@
   - click
 ...
 ---
-- MouseGesture: Mouse Gesture Button
-- MouseClick: [button9, 1]
-...
----
 - MouseGesture: Mouse Left
 - KeyPress:
   - [Super_L, Control_L, k]
@@ -34,14 +30,14 @@
   - click
 ...
 ---
-- Key: [Forward Button, pressed]
+- MouseGesture: Back Button
 - KeyPress:
-  - XF86_Forward
+  - XF86_Back
   - click
 ...
 ---
-- Key: [Back Button, pressed]
+- Key: [Forward Button, pressed]
 - KeyPress:
-  - XF86_Back
+  - XF86_Forward
   - click
 ...
