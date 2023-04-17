@@ -8,13 +8,13 @@
 ---
 - MouseGesture: Mouse Left
 - KeyPress:
-  - [Super_L, Control_L, h]
+  - [Super_L, Control_L, Left]
   - click
 ...
 ---
 - MouseGesture: Mouse Right
 - KeyPress:
-  - [Super_L, Control_L, l]
+  - [Super_L, Control_L, Right]
   - click
 ...
 ---
