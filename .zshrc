@@ -121,6 +121,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+source ~/.norwayrc
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -156,6 +157,14 @@ alias ga="git add -A"
 alias grc="git rebase --continue"
 alias grs="git rebase --skip"
 alias gmc="git merge --continue"
+alias sshnode="sshpass -f ~/.nodeserver ssh node"
+alias sshkube="sshpass -f ~/.nodeserver ssh kube"
+
+# https://github.com/stuartleeks/wsl-notify-send
+notify-send() {
+  /mnt/c/Users/dan.ford/wsl-notify-send.exe --category $WSL_DISTRO_NAME "${@}";
+}
+
 export LC_ALL=C
 export EDITOR=vim
 
