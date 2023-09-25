@@ -88,7 +88,7 @@ plugins=(
   golang
   kubectl
   minikube
-  kube-ps1
+#  kube-ps1
   node
   npm
   postgres
@@ -116,7 +116,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-PROMPT=$PROMPT'$(kube_ps1)'
+# PROMPT=$PROMPT'$(kube_ps1): '
 
 # User configuration
 
