@@ -1,4 +1,4 @@
-- 1.1.9
+- 1.1.10
 - _NAME: MX Master 3S
   _absent: [hi-res-scroll, lowres-scroll-mode, onboard_profiles, report_rate, pointer_speed, speed-change, backlight, backlight-timed, fn-swap, persistent-remappable-keys,
     disable-keyboard-keys, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params,
@@ -22,10 +22,6 @@
   thumb-scroll-invert: true
   thumb-scroll-mode: false
 - _NAME: MX Anywhere 3
-  _absent: [hi-res-scroll, lowres-scroll-mode, scroll-ratchet, thumb-scroll-invert, thumb-scroll-mode, onboard_profiles, report_rate, pointer_speed, speed-change,
-    backlight, backlight-timed, fn-swap, persistent-remappable-keys, disable-keyboard-keys, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led,
-    multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
-  _battery: 4100
   _modelId: B02D00000000
   _sensitive: {divert-keys: true, dpi: true, smart-shift: true}
   _serial: BE66BA8E
@@ -39,3 +35,16 @@
   hires-smooth-resolution: false
   reprogrammable-keys: {80: 80, 81: 81, 82: 82, 83: 83, 86: 86, 196: 196}
   smart-shift: 5
+- _NAME: Illuminated Living-Room Keyboard K830
+  _modelId: B335404C0000
+  _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
+  _serial: 3FF6CB53
+  _unitId: 4361D7E3
+  _wpid: 404C
+  disable-keyboard-keys: {1: false, 4: false, 8: false, 16: false}
+  divert-keys: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 8: 0, 34: 0, 40: 0, 62: 0, 64: 0, 79: 0, 84: 0, 110: 0, 145: 0, 183: 0, 184: 0}
+  fn-swap: true
+  gesture2-divert: {1: false, 2: false, 10: false, 44: false, 64: false, 65: false, 67: false, 84: false, 85: false, 100: false}
+  gesture2-gestures: {1: true, 2: true, 10: true, 30: true, 34: false, 42: true, 43: true, 45: false, 64: false, 65: false, 67: false, 84: true}
+  gesture2-params:
+    4: {scale: 256}
