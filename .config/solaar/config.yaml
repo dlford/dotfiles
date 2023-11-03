@@ -48,3 +48,10 @@
   gesture2-gestures: {1: true, 2: true, 10: true, 30: true, 34: false, 42: true, 43: true, 45: false, 64: false, 65: false, 67: false, 84: true}
   gesture2-params:
     4: {scale: 256}
+- _NAME: MX Master 3S
+  _absent: [hi-res-scroll, lowres-scroll-mode, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert,
+    thumb-scroll-mode, onboard_profiles, report_rate, pointer_speed, dpi, speed-change, backlight, backlight-timed, fn-swap, reprogrammable-keys, persistent-remappable-keys,
+    divert-keys, disable-keyboard-keys, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, change-host, gesture2-gestures,
+    gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
+  _battery: 0
+  _wpid: B034
