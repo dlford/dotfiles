@@ -144,6 +144,9 @@ alias weather="curl wttr.in"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias playbook="ansible-playbook --vault-password-file ~/.ansible_vault"
 
+export SEALED_SECRETS_CERT=https://secrets.local.dlford.co/v1/cert.pem
+export SEALED_SECRETS_CONTROLLER_NAMESPACE=sealed-secrets
+
 # If vte.sh is not found:
 #   ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 # if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
